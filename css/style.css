@@ -1,0 +1,198 @@
+.blockwidth {
+    width: 55px;
+}
+
+.x-large {
+    font-size: x-large;
+}
+
+.pl {
+    padding-left: 17px;
+}
+
+.top {
+    padding-top: 750px;
+}
+
+.blue {
+    background-color: rgb(7, 71, 166) !important;
+    color: white;
+}
+
+.border-unset {
+    border: unset;
+}
+
+.height {
+    height: 1000em;
+}
+
+.width40 {
+    transition: margin-left 0.5s;
+    width: 23%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.border {
+    border: solid;
+    border-radius: 50px;
+    padding: 4px 11px 4px 11px;
+    background-color: white;
+    margin: -35px -15px 0px 0px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.padl {
+    padding-left: 20px;
+}
+
+.pl25{
+    padding-left: 25px;
+}
+
+.height755 {
+    height: 1000px;
+}
+
+.pl0 {
+    padding-left: 0px;
+}
+
+.pad {
+    padding: 11px 12px 17px 6px;
+
+}
+
+.padding-left {
+    padding: 50px 50px 0px 0px;
+}
+
+.margin-top {
+    margin-top: -33px;
+}
+
+.card-img-top1 {
+    width: 13%;
+}
+
+.bkg-grey {
+    background-color: rgb(243, 243, 243) !important;
+}
+
+.padding-img {
+    padding: 20px;
+}
+
+.z-indez {
+    z-index: 1;
+}
+
+.margin-img {
+    margin: -15px 0px 0px 22px;
+}
+
+.width18 {
+    width: 18%;
+    height: 159px;
+}
+
+.width {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.bkg-color {
+    color: rgb(42, 86, 216);
+    background-color: rgb(198, 238, 255);
+    border-radius: 5px;
+}
+
+.bkg-gray {
+    color: rgb(73, 73, 73);
+    background-color: rgb(206, 206, 206);
+}
+
+.margin-l {
+    margin-left: -5px;
+}
+
+.font-size-small {
+    font-size: x-small;
+}
+
+.bkg-culor-2 {
+    background-color: orange;
+    border: orange;
+    color: gray;
+}
+
+.mrg {
+    margin: 0px -5px 1px -5px;
+}
+
+.ml-11 {
+    margin-left: 11px;
+}
+
+.sidenav {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+}
+
+#main {
+    transition: margin-left 0.5s;           
+    margin-left: 400px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.main-open {
+    margin-left: 235px !important;
+}
+
+.main-close {
+    margin-left: 12px !important;
+}
+
+.sidenav-open {
+    margin-left: 55px!important;
+    width: 250px!important;
+}
+
+.sidenav-close {
+    margin-left: 0!important;
+    width: 50px!important;
+}
+
+.white-blue {
+    background-color: white !important;
+    color: #007bff ;
+}
