@@ -1,3 +1,10 @@
+:root {
+    --bitbucketBlue:rgb(7, 71, 166);
+    --white: #ffffff; 
+    --staticMenuWidth: 100px;
+    --sidenavOpenWidth: 280px;
+}
+
 .blockwidth {
     width: 55px;
 }
@@ -15,7 +22,7 @@
 }
 
 .blue {
-    background-color: rgb(7, 71, 166) !important;
+    background-color: var(--bitbucketBlue) !important;
     color: white;
 }
 
@@ -158,12 +165,12 @@
 
 .menu {
     height: 100%;
-    width: 30px;
+    width: 75px;
     position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: #0007ff;
+    background-color: var(--bitbucketBlue);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -175,7 +182,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #0007ff;
+    background-color: var(--bitbucketBlue);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -204,7 +211,7 @@
 
 .sidenav-open {
     width: 280px!important;
-    margin-left: 30px!important;
+    margin-left: 75px!important;
 }
 
 .sidenav-close {
@@ -215,14 +222,14 @@
 #main {
     transition: margin-left .5s;
     padding: 16px;
-    margin-left: 30px;
+    margin-left: var(--staticMenuWidth);
 }
 .main-open {
-    margin-left: 300px!important;
+    margin-left: calc(var(--staticMenuWidth) + var(--sidenavOpenWidth))!important;
 }
 
 .main-close {
-    margin-left: 30px!important;
+    margin-left: var(--staticMenuWidth) !important;
 }
 
 @media screen and (max-height: 450px) {
