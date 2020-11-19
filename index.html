@@ -1,394 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!Doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bitbucket</title>
-    <link rel="stylesheet" type="text/css" href="styles/task12.css">
-    <link rel="stylesheet" type="text/css" href="styles/gmail.css">
-    <link rel="stylesheet" type="text/css" href="styles/task14.css">
-    <link rel="stylesheet" type="text/css" href="styles/task11.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bitbucket-test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type='text/css' />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.grid.css" type='text/css' />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.reboot.css" type='text/css' />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css" type='text/css' />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css" type='text/css' />
     <link rel="stylesheet" href="css/style.css" type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- <style>
+        .menu {
+            height: 100%;
+            width: 30px;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            background-color: #0007ff;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #0007ff;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .sidenav-open {
+            width: 280px!important;
+            margin-left: 30px!important;
+        }
+
+        .sidenav-close {
+            width: 0!important;
+            margin-left: 0!important;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+            margin-left: 30px;
+        }
+        .main-open {
+            margin-left: 300px!important;
+        }
+
+        .main-close {
+            margin-left: 30px!important;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+    </style> -->
 </head>
-<body class="height">
-    <div>
-        <div class="blockwidth blue fl height755">
+<body>
+    <div class="main-content">
+        <div class="left-side">
             <div>
-                <span class="fl">
-                    <img src="images/icon bucket.png">
-                </span>
-                <span class="left-side accordion">
-                    <span style="cursor:pointer" class="border" id="main" onclick="openNav()">
-                        <i class="fa fa-angle-right"></i>
-                    </span>
-                </span>
-                <span class="x-large pl">
-                    <i class="fa fa-search"></i>
-                </span>
-                <span class="x-large pl">
-                    <i class="fa fa-plus"></i>
-                </span>
-                <span class="x-large pl top">
-                    <i class="fa fa-bars"></i>
-                </span>
-                <span class="x-large pl">
-                    <span class="btn-group dropup">
-                        <button type="button" class="blue border-none" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-question-circle margin-l"></i>
-                        </button>
-                        <span class="dropdown-menu">
-                            <a class="dropdown-item" href="https://www.google.com"><span class="font-size-small">HELP</span></a>
-                            <a class="dropdown-item" href="https://www.google.com">Documentation</a>
-                            <a class="dropdown-item" href="https://www.google.com">Learn Git</a>
-                            <a class="dropdown-item" href="https://www.google.com">Keyboard shortcuts</a>
-                            <a class="dropdown-item" href="https://www.google.com">Bitbucket tutorials</a>
-                            <a class="dropdown-item" href="https://www.google.com">API</a>
-                            <a class="dropdown-item" href="https://www.google.com">Support</a>
-                            <a class="dropdown-item" href="https://www.google.com"><span class="font-size-small">INFORMATION</span></a>
-                            <a class="dropdown-item" href="https://www.google.com">Blog</a>
-                            <a class="dropdown-item" href="https://www.google.com">Plans & pricing</a>
-                            <a class="dropdown-item" href="https://www.google.com">Site status</a>
-                            <a class="dropdown-item" href="https://www.google.com"><span class="font-size-small">LEGAL</span></a>
-                            <a class="dropdown-item" href="https://www.google.com">Terms of service</a>
-                            <a class="dropdown-item" href="https://www.google.com">Privacy policy</a>
-                        </span>
-                    </span>
-                </div>
-                <div>
-                    <div class="ml-11">
-                       <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                            <h6 class="mrg">KV</h6>
-                       </button>
+                <div class="menu">
+                    <div>
+                        <span style="font-size:30px;cursor:pointer; text-align: center;" onclick="openNav()">&#9776;</span>
                     </div>
+                    <div>About</div>
+                    <div>Info</div>
+                </div>
+                <div id="leftSidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
                 </div>
             </div>
         </div>
-        <div class="width40" id="leftSidenav">
-            <div id="mySidenav" class="sidenav sidenav-open blue border-none height755">
-                <h3 class="pl25">Bitbucket</h3>
-                    <a href="javascript:void(0)" class="closebtn border" style="position: absolute; cursor:pointer" onclick="closeNav()">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                <div>
-                    <div class="pl25">
-                        <button href="#" class="border-none blue pad10">
-                            <i class="fa fa-inbox fl"> Your work</i>
-                        </button>
-                    </div>
-                    <div class="pl25">
-                        <button href="#" class="border-none blue pad10">
-                            <i class="fa fa-exchange fl"> Repositiories</i>
-                        </button>
-                    </div>
-                    <div class="pl25">
-                        <button href="#" class="border-none blue pad10">
-                            <i class="fa fa-folder-o fl"> Projects</i>
-                        </button>
-                    </div>
-                    <div class="pl25">
-                        <button href="#" class="border-none blue pad10">
-                            <i class="fa fa-code-fork fl"> Pull requests</i>
-                        </button>
-                    </div>
-                    <div class="pl25">
-                        <button href="#" class="border-none blue pad10">
-                            <i class="fa fa-scissors fl"> Snnipets</i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <script>
-                function openNav() {
-                  document.getElementById("mySidenav").style.width = "300px";
-                  document.getElementById("main").style.marginLeft = "300px";
-                }
-                
-                function closeNav() {
-                  document.getElementById("mySidenav").style.width = "0px";
-                  document.getElementById("main").style.marginLeft= "0px";
-                }
-                </script>
-        </div>
-        <div class="padding-left main-open">
-            <div>
-                <span>
-                    <h2>Recent repositories</h2>
-                    <a class="fr margin-top" href="#">Show more . View all</a>
-                </span>
-            </div>
-            <div class="card width18 fl">
-                <div>
-                    <div class="bkg-grey padding-img z-index">
-                    </div>
-                    <span class="margin-img">
-                    <img class="card-img-top1 margin-img" src="images/php.png">
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-text">GGGI Site</h5>
-                        <p>itworks-expert</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card width18 fl">
-                <div>
-                    <div class="bkg-grey padding-img z-index">
-                    </div>
-                    <span class="margin-img">
-                    <img class="card-img-top1 margin-img" src="images/c+.png">
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-text">GGGI Amazon Bot</h5>
-                        <p>itworks-expert</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card width18 fl">
-                <div>
-                    <div class="bkg-grey padding-img z-index">
-                    </div>
-                    <span class="margin-img">
-                    <img class="card-img-top1 margin-img" src="images/code.png">
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-text">InfiniteRunner</h5>
-                        <p>Kiril Vasilita</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card width18 fl">
-                <div>
-                    <div class="bkg-grey padding-img z-index">
-                    </div>
-                    <span class="margin-img">
-                    <img class="card-img-top1 margin-img" src="images/code.png">
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-text">TrickyBasketBall</h5>
-                        <p>Kiril Vasilita</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card width18 fl">
-                <div>
-                    <div class="bkg-grey padding-img z-index">
-                    </div>
-                    <span class="margin-img">
-                    <img class="card-img-top1 margin-img" src="images/code.png">
-                    </span>
-                    <div class="card-body">
-                        <h5 class="card-text">SeleniumBot</h5>
-                        <p>Kiril Vasilita</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="padding-left main-open">
-            <div class="fl width">
-                <div>
-                    <h2>Pull requests</h2>
-                    <br><hr>
-                    <br><p class="center">You have no pull requests</p>
-                    <br><hr>
-                    <h2>Jira Software issues</h2>
-                </div>
-            </div>
-            <div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">
-                                Issue
-                            </th>
-                            <th scope="col">
-                                Status
-                            </th>
-                            <th scope="col">
-                                Assignee
-                            </th>
-                            <th scope="col">
-                                Actions
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="images/punct.png">
-                                GGGI-122 Am modificat datele din profilul personal si mi-a dat eroare
-                            </td>
-                            <td>
-                                <span class="badge badge-pill bkg-color">TESTING</span>
-                            </td>
-                            <td>
-                                <div class="ml-11">
-                                    <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                                         <h6 class="mrg">KV</h6>
-                                    </button>
-                                 </div>
-                            </td>
-                            <td>
-                                <div class="dropdown btn-group dropleft">
-                                    <button type="button" class="btn btn-outline-dark border-none" 
-                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="https://www.google.com">Create Branch</a>
-                                      </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="images/punct.png">
-                                GGGI-122 Dupa autentificare prin Facebook - nu se trage poza si ziua de nastere a mea
-                            </td>
-                            <td>
-                                <span class="badge badge-pill bkg-color">TESTING</span>
-                            </td>
-                            <td>
-                                <div class="ml-11">
-                                    <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                                         <h6 class="mrg">KV</h6>
-                                    </button>
-                                 </div>
-                            </td>
-                            <td>
-                                <div class="dropdown btn-group dropleft">
-                                    <button type="button" class="btn btn-outline-dark border-none" 
-                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="https://www.google.com">Create Branch</a>
-                                      </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="images/punct.png">
-                                GGGI-122 Apas in campul calendarului - apar sugestii
-                            </td>
-                            <td>
-                                <span class="badge badge-pill bkg-gray">DONE</span>
-                            </td>
-                            <td>
-                                <div class="ml-11">
-                                    <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                                         <h6 class="mrg">KV</h6>
-                                    </button>
-                                 </div>
-                            </td>
-                            <td>
-                                <div class="dropdown btn-group dropleft">
-                                    <button type="button" class="btn btn-outline-dark border-none" 
-                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="https://www.google.com">Create Branch</a>
-                                      </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="images/punct.png">
-                                GGGI-122 Din lista upcomming occasion apas pe numele prietenului si da eroare
-                            </td>
-                            <td>
-                                <span class="badge badge-pill bkg-color">TESTING</span>
-                            </td>
-                            <td>
-                                <div class="ml-11">
-                                    <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                                         <h6 class="mrg">KV</h6>
-                                    </button>
-                                 </div>
-                            </td>
-                            <td>
-                                <div class="dropdown btn-group dropleft">
-                                    <button type="button" class="btn btn-outline-dark border-none" 
-                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="https://www.google.com">Create Branch</a>
-                                      </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="images/punct.png">
-                                GGGI-122 Dupa ce salvez cardul - apare eroarea  
-                            </td>
-                            <td>
-                                <span class="badge badge-pill bkg-color">TESTING</span>
-                            </td>
-                            <td>
-                                <div class="ml-11">
-                                    <button class="btn btn-warning rounded-circle bkg-color-2 border-none">
-                                         <h6 class="mrg">KV</h6>
-                                    </button>
-                                 </div>
-                            </td>
-                            <td>
-                                <div class="dropdown btn-group dropleft">
-                                    <button type="button" class="btn btn-outline-dark border-none" 
-                                    type="button" id="dropdownMenuButton" data-toggle="dropdown" 
-                                    aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="https://www.google.com">Create Branch</a>
-                                    </div>
-                                    <hr>
-                                </div>
-                            </td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
+        <div class="right-side" id="main">
+            <h2>Sidenav Push Example</h2>
+            <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
         </div>
     </div>
-    <div>
-        <script src="js/jquery-3.5.1.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            function openNav() {
-                $("#leftSidenav").removeClass('sidenav-close');
-                $("#leftSidenav").addClass('sidenav-open');
-    
-                $("#main").removeClass('main-close');
-                $("#main").addClass('main-open');
-            }
-    
-            function closeNav() {
-                $("#leftSidenav").removeClass('sidenav-open');
-                $("#leftSidenav").addClass('sidenav-close');
-    
-                $("#main").removeClass('main-open');
-                $("#main").addClass('main-close');
-            }
-        </script>
-    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+        function openNav() {
+            $("#leftSidenav").removeClass('sidenav-close');
+            $("#leftSidenav").addClass('sidenav-open');
+
+            $("#main").removeClass('main-close');
+            $("#main").addClass('main-open');
+        }
+
+        function closeNav() {
+            $("#leftSidenav").removeClass('sidenav-open');
+            $("#leftSidenav").addClass('sidenav-close');
+
+            $("#main").removeClass('main-open');
+            $("#main").addClass('main-close');
+        }
+    </script>
+
 </body>
 </html>
