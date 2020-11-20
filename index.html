@@ -93,33 +93,33 @@
         }
     </style> -->
 </head>
-<body>
+<body class="height">
     <div class="main-content">
         <div class="left-side">
             <div>
-                <div class="menu">
+                <div class="menu fl">
                     <div>
-                        <span style="font-size:30px;cursor:pointer; text-align: center;" onclick="openNav()">&#9776;</span>
+                        <div>
+                            <span class="border open" onclick="openNav()">
+                                <i class="fa fa-angle-right white-blue"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="">
+                    <div style="margin-left: 5px;
+                    margin-top: -30px;">
                         <img src="images/icon bucket.png">
                     </div>
-                    <div class="">
-                        <span style="cursor:pointer; margin-left: 12px;" class="border" onclick="openNav()">
-                            <i class="fa fa-angle-right white-blue"></i>
-                        </span>
+                    <div class="x-large">
+                        <i class="fa fa-search ml-20"></i>
                     </div>
-                    <div class="">
-                        <i class="fa fa-search"></i>
+                    <div class="x-large">
+                        <i class="fa fa-plus ml-20"></i>
                     </div>
-                    <div class="">
-                        <i class="fa fa-plus"></i>
+                    <div class="x-large top">
+                        <i class="fa fa-bars ml-20"></i>
                     </div>
-                    <div class="">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <div class="">
-                        <div class="btn-group dropup">
+                    <div class="x-large">
+                        <div class="btn-group dropup ml-20">
                             <button type="button" class="blue border-none" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-question-circle margin-l"></i>
                             </button>
@@ -151,7 +151,9 @@
                 </div>
                 </div>
                 <div id="leftSidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="javascript:void(0)" class="closebtn border" onclick="closeNav()">
+                        <i class="fa fa-angle-left white-blue"></i>
+                    </a>
                     <h3 class="pl25">Bitbucket</h3>
                     <h6 class="pl25">
                         <button href="#" class="border-none blue pad10">
@@ -181,34 +183,10 @@
                 </div>
             </div>
         </div>
-        <div class="right-side" id="main">
+        <div class="right-side fl" id="main">
             <h2>Sidenav Push Example</h2>
             <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <script>
-        function openNav() {
-            $("#leftSidenav").removeClass('sidenav-close');
-            $("#leftSidenav").addClass('sidenav-open');
-
-            $("#main").removeClass('main-close');
-            $("#main").addClass('main-open');
-        }
-
-        function closeNav() {
-            $("#leftSidenav").removeClass('sidenav-open');
-            $("#leftSidenav").addClass('sidenav-close');
-
-            $("#main").removeClass('main-open');
-            $("#main").addClass('main-close');
-        }
-    </script>
-
 </body>
 </html>
