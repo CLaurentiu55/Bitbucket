@@ -2,7 +2,7 @@
     --bitbucketBlue:rgb(7, 71, 166);
     --white: #ffffff; 
     --staticMenuWidth: 100px;
-    --sidenavOpenWidth: 280px;
+    --sidenavOpenWidth: 150px;
 }
 
 .blockwidth {
@@ -100,7 +100,7 @@
 }
 
 .card-img-top1 {
-    width: 13%;
+    width: 20%;
 }
 
 .bkg-grey {
@@ -212,8 +212,8 @@
 }
 
 .sidenav-open {
-    width: 280px!important;
-    margin-left: 75px!important;
+    width: 220px!important;
+    margin-left: 59px!important;
 }
 
 .sidenav-close {
@@ -241,4 +241,8 @@
 
 .ml-20 {
     margin-left: 20px;
+}
+
+.grey {
+    color: rgb(150, 150, 150);
 }
